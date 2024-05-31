@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import { CircularProgressbar } from "react-circular-progressbar";
+import "react-circular-progressbar/dist/styles.css";
+import "./App.css";
 
 function App() {
+  // const percentage = 45;
+
+  const [time, setTime] = useState(10);
+  setTimeout(() => {
+    time === 0 ? setTime(0) : setTime(time - 1);
+  }, 1000);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "100vh",
+        }}
+      >
+        <div style={{ width: 200, height: 200 }}>
+          <CircularProgressbar value={time} maxValue={10} text={`${time}`} />
+        </div>
+      </div>
     </div>
   );
 }
