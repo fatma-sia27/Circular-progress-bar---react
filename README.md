@@ -1,3 +1,7 @@
+
+Here is the demo of the progree bar :
+![image](https://github.com/fatma-sia27/Circular-progress-bar---react/assets/77666526/fe0a888f-ff52-4755-a1da-aa810eee8590)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
